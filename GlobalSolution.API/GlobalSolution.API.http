@@ -4,3 +4,50 @@ GET {{GlobalSolution.API_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+### WasteCollection API Endpoints
+
+# Get all waste collections (with pagination)
+GET {{GlobalSolution.API_HostAddress}}/api/WasteCollection?page=1&pageSize=10
+Accept: application/json
+
+###
+
+# Get waste collection by ID
+GET {{GlobalSolution.API_HostAddress}}/api/WasteCollection/1
+Accept: application/json
+
+###
+
+# Create a new waste collection
+POST {{GlobalSolution.API_HostAddress}}/api/WasteCollection
+Content-Type: application/json
+
+{
+  "location": "São Paulo - Centro",
+  "wasteType": "Recyclable",
+  "quantityKg": 150.5,
+  "collectionDate": "2024-01-15T10:00:00Z",
+  "notes": "Collected from commercial area"
+}
+
+###
+
+# Update a waste collection
+PUT {{GlobalSolution.API_HostAddress}}/api/WasteCollection/1
+Content-Type: application/json
+
+{
+  "location": "São Paulo - Centro",
+  "wasteType": "Organic",
+  "quantityKg": 200.0,
+  "collectionDate": "2024-01-15T10:00:00Z",
+  "notes": "Updated collection data"
+}
+
+###
+
+# Delete a waste collection
+DELETE {{GlobalSolution.API_HostAddress}}/api/WasteCollection/1
+
+###

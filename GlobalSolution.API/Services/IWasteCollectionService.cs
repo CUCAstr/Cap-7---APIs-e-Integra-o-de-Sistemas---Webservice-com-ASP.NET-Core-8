@@ -1,4 +1,3 @@
-using GlobalSolution.API.Models;
 using GlobalSolution.API.ViewModels;
 
 namespace GlobalSolution.API.Services;
